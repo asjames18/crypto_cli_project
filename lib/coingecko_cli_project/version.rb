@@ -1,0 +1,3 @@
+module CoingeckoCliProject
+  VERSION = "0.1.0"
+end
