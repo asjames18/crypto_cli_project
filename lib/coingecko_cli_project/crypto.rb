@@ -13,7 +13,7 @@ class CoingeckoCliProject::Crypto
         @low_24h = low_24h
         @circulating_supply = circulating_supply
         @ath_change_percentage = ath_change_percentage 
-        save
+        self.save
     end
 
     def save

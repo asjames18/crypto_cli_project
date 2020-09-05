@@ -14,7 +14,7 @@ class CoingeckoCliProject::Cli
                  Welcome to Blockchain Coins!
 💵​💶​💷​💴​🪙​​💵​💶​💷​💴​🪙​​💵​💶​💷​💴​🪙​ 💵​💶​💷​💴​🪙​​💵​💶​💷​💴​🪙​​💵​💶​💷​💴​🪙​​ 💷​💴​​💷​💴​🪙​1
 ------------------------------------------------------------------
-    Type "list" to see coins or type "exit" to exit the program:.
+    Type "LIST" to see coins or type "EXIT" to exit the program:.
 ------------------------------------------------------------------
 DOC
 puts ""
@@ -35,7 +35,7 @@ puts""
     def invalid_entry
         puts "⛔error: incorrect entry⛔".red.bold
         puts "-------------------------"
-        puts "Type: LIST to see coins or exit".yellow.bold
+        puts "Type: LIST to see coins or EXIT".yellow.bold
         menu
     end
 
@@ -52,7 +52,7 @@ puts""
         puts ""
         puts "Pick a coin from the list for more information or EXIT.".yellow.bold
         input = gets.strip.downcase
-        if input.to_i > 0 && input.to_i <= CoingeckoCliProject::Crypto.all.size  
+        if input.to_i > 0 && input.to_i <= CoingeckoCliProject::Crypto.all.length  
         coin_info(input)
         elsif input == "list"
             coin_list
@@ -84,7 +84,7 @@ def coin_info(input)
         puts "Pick another coin or type LIST to see all coins".yellow.bold
         puts " or EXIT".yellow.bold
         input = gets.strip.downcase
-        if input.to_i > 0 && input.to_i <= CoingeckoCliProject::Crypto.all.size  
+        if input.to_i > 0 && input.to_i <= CoingeckoCliProject::Crypto.all.length 
         coin_info(input)
         elsif input == "list"
             coin_list
@@ -98,3 +98,12 @@ def coin_info(input)
 end
 
 
+def greeting
+    name = "bill"
+    if name == "bill"
+        "Hello Bill"
+    else
+        "Hello Stranger"
+    end
+    "Hello Stranger"
+end
